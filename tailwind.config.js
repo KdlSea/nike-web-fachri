@@ -38,7 +38,38 @@ export default {
       screens: {
         "wide": "1440px",
         "temp": "880px"
-      }
+      },
+      keyframes: {
+        'swing-in-top-fwd': {
+          '0%': {
+            transform: 'rotateX(-100deg)',
+            'transform-origin': 'top',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'rotateX(0deg)',
+            'transform-origin': 'top',
+            opacity: '1',
+          },
+        },
+        'swing-out-top-fwd': {
+          '0%': {
+            transform: 'rotateX(0deg)',
+            'transform-origin': 'top',
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'rotateX(-100deg)',
+            'transform-origin': 'top',
+            opacity: '0',
+          },
+        },
+        
+      },
+      animation: {
+        'swing-in-top-fwd': 'swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both',
+        'swing-out-top-fwd': 'swing-out-top-fwd 0.5s cubic-bezier(1,-0.01,.16,.99) both',
+      },
     },
   },
   plugins: [],
