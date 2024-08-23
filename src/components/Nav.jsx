@@ -64,7 +64,7 @@ const Nav = () => {
                   <li key={item.label} className='list-none'>
                     <a href={item.href} className={`
                     fonts-monserrat leading-normal text-lg
-                    text-slate-gray`}>
+                    text-slate-gray`} onClick={() => setisMenuOpen(!isMenuOpen)}>
                       {item.label}
                     </a>
                   </li>
